@@ -4,6 +4,7 @@
 	<head>
 		<meta  charset="utf-8">
 		<title>welcome </title>
+		<link href="style/style.css" rel="stylesheet" />
 	</head>
 
 	<body>
@@ -14,8 +15,12 @@
 		<button type="button" onclick="alert('欢迎')">点我</button>
 		
 		<p id="demo"> 我的第一个段落</p>
+		<p id="clock"></p>
 		<script>
-			document.getElementById("demo").innerHTML="段落已修改"
+			var start = Date.now();
+			self.setInterval(() => {
+				document.getElementById("clock").innerHTML = Date.now() - start;
+			}, 1);
 		</script>
 	</body>
 </html>
